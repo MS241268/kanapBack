@@ -23,7 +23,7 @@ app.use(express.static('images'));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+app.use('/api/products', productRoutes);
 // Route pour UptimeRobot
 app.get('/ping', (req, res) => res.status(200).send('OK'));
 module.exports = app;
